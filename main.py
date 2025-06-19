@@ -49,9 +49,7 @@ def index():
     return HTMLResponse(content=html_content, status_code=200)
 
 @app.post("/gcd")
-async def give_gcd(a, b):
-    inta = (int)a
-    intb = (int)b
-    while intb:
-        inta, intb = intb, inta % intb
+async def give_gcd(a: int, b: int):
+    while b:
+        a, b = b, a % b
     return {"response": f"{a}と{b}の最小公倍数は {inta}です"}  # f文字列というPythonの機能を使っている
