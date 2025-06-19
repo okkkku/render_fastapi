@@ -48,12 +48,12 @@ def index():
                         var canvas = document.getElementById('html');
                         if (canvas.getContext){
                             var ctx = canvas.getContext('2d');
-                            ctx.fillRect(50,50,300,260);
-                            ctx.clearRect(120,80,200,180);
-                            ctx.strokeRect(180,20,180,180);
                             ctx.beginPath();
-                            ctx.arc(200,150,10,0,Math.PI*2.0,true);
-                            ctx.fill();
+                            ctx.ellipse(300,300,100,50,0,0,Math.PI,true);
+                            ctx.stroke();
+                            ctx.beginPath();
+                            ctx.ellipse(300,300,100,50,0,Math.PI,Math.PI*2.0,true);
+                            ctx.stroke();
                         }
                     }
                 </script>
