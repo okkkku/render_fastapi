@@ -52,7 +52,7 @@ def index():
                             ctx.ellipse(300,300,100,50,0,0,Math.PI,true);
                             ctx.stroke();
                             ctx.beginPath();
-                            ctx.ellipse(300,300,100,50,0,Math.PI,Math.PI*2.0,true);
+                            ctx.ellipse(300,300,100,50,0,0,Math.PI,false);
                             ctx.stroke();
                         }
                     }
