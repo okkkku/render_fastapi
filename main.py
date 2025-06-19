@@ -42,18 +42,18 @@ def index():
             <title>Some HTML in here</title>
         </head>
         <body onload="draw();">
-            <canvas id="html" width="400" height="300"></canvas>
+            <canvas id="html" width="500" height="500"></canvas>
                 <script type="text/javascript">
                     function draw(){
                         var canvas = document.getElementById('html');
                         if (canvas.getContext){
                             var ctx = canvas.getContext('2d');
                             ctx.beginPath();
-                            ctx.ellipse(300,150,100,50,0,0,Math.PI,true);
+                            ctx.ellipse(300,150,100,50,0,0,Math.PI*2.0,true);
                             ctx.stroke();
                             ctx.beginPath();
-                            ctx.ellipse(300,150,100,50,0,0,Math.PI,false);
-                            ctx.stroke();
+                            ctx.ellipse(300,150,50,50,0,0,Math.PI,false);
+                            ctx.fill(#0f0);
                         }
                     }
                 </script>
