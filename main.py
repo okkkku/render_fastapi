@@ -54,4 +54,6 @@ async def give_gcd(a: int, b: int):
     B = b
     while b:
         a, b = b, a % b
+    if a == 1:
+        return {"response": f"{A}と{B}は互いに素です" }
     return {"response": f"{A}と{B}の最小公倍数は {a}です"}  # f文字列というPythonの機能を使っている
