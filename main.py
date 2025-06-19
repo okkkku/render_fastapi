@@ -50,6 +50,8 @@ def index():
 
 @app.post("/gcd")
 async def give_gcd(a: int, b: int):
+    A = a
+    B = b
     while b:
         a, b = b, a % b
-    return {"response": f"{a}と{b}の最小公倍数は {inta}です"}  # f文字列というPythonの機能を使っている
+    return {"response": f"{A}と{B}の最小公倍数は {a}です"}  # f文字列というPythonの機能を使っている
