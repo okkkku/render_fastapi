@@ -41,9 +41,25 @@ def index():
         <head>
             <title>Some HTML in here</title>
         </head>
-        <body>
-            <h1>Look ma! HTML!</h1>
-        </body>
+        <body onload="draw();">
+    <canvas id="sample" width="400" height="300"></canvas>
+        <script type="text/javascript">
+            function draw(){
+                var canvas = document.getElementById('sample');
+                if (canvas.getContext){
+                    var ctx = canvas.getContext('2d');
+                    ctx.fillRect(50,50,300,260);
+                    ctx.clearRect(120,80,200,180);
+                    ctx.strokeRect(180,20,180,180);
+                }
+            }
+        </script>
+    <style type="text/css">
+        #sample {
+            background: #fff;
+        }
+    </style>
+  </body>
     </html>
     """
     return HTMLResponse(content=html_content, status_code=200)
