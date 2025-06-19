@@ -48,12 +48,13 @@ def index():
                         var canvas = document.getElementById('html');
                         if (canvas.getContext){
                             var ctx = canvas.getContext('2d');
-                            for(let i = 0; i < 10; i++) {
+                            let div = 50;
+                            for(let i = 0; i < div; i++) {
                                 ctx.beginPath();
                                 ctx.moveTo(250, 250);
-                                ctx.arc(250,250,100,i*Math.PI/5,(i+1)*Math.PI/5,false);
+                                ctx.arc(250,250,100,i*Math.PI*2.0/div,(i+1)*Math.PI*2.0/div,false);
                                 ctx.closePath();
-                                ctx.fillStyle = `hsl(${Math.floor(i*360/10)}, 100%, 50%)`;
+                                ctx.fillStyle = `hsl(${Math.floor(i*360/div)}, 100%, 50%)`;
                                 ctx.fill();
                             }
                         }
