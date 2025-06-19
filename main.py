@@ -50,8 +50,8 @@ def index():
                             var ctx = canvas.getContext('2d');
                             for(let i = 0; i < 10; i++) {
                                 ctx.beginPath();
-                                ctx.moveTo(300, 150);
-                                ctx.arc(300,150,50,i*Math.PI/5,(i+1)*Math.PI/5,true);
+                                ctx.moveTo(250, 250);
+                                ctx.arc(250,250,100,i*Math.PI/5,(i+1)*Math.PI/5,true);
                                 ctx.closePath();
                                 ctx.fillStyle = `rgb(${Math.floor(i*255/10)} 255 0)`;
                                 ctx.fill();
