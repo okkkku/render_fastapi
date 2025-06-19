@@ -49,10 +49,10 @@ def index():
                         if (canvas.getContext){
                             var ctx = canvas.getContext('2d');
                             ctx.beginPath();
-                            ctx.ellipse(300,300,100,50,0,0,Math.PI,true);
+                            ctx.ellipse(300,150,100,50,0,0,Math.PI,true);
                             ctx.stroke();
                             ctx.beginPath();
-                            ctx.ellipse(300,300,100,50,0,0,Math.PI,false);
+                            ctx.ellipse(300,150,100,50,0,0,Math.PI,false);
                             ctx.stroke();
                         }
                     }
