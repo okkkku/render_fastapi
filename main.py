@@ -51,7 +51,7 @@ def index():
                             for(let i = 0; i < 10; i++) {
                                 ctx.beginPath();
                                 ctx.moveTo(300, 150);
-                                ctx.ellipse(300,150,50,50,0,i*Math.PI/5,(i+1)*Math.PI/5,true);
+                                ctx.arc(300,150,50,i*Math.PI/5,(i+1)*Math.PI/5,true);
                                 ctx.closePath();
                                 ctx.fillStyle = `rgb(${Math.floor(i*255/10)} 255 0)`;
                                 ctx.fill();
