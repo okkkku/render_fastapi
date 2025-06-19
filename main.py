@@ -48,7 +48,8 @@ def index():
     """
     return HTMLResponse(content=html_content, status_code=200)
 
-@app.post("/present")
-async def give_present(a, b):
-    s = int(a) + int(b)
-    return {"response": f"サーバです。メリークリスマス！ {s}ありがとう。お返しはキャンディーです。"}  # f文字列というPythonの機能を使っている
+@app.post("/gcd")
+async def give_gcd(a, b):
+    while b: # bが0(False)になると終了
+        a, b = b, a % b
+    return {"response": f"サーバです。メリークリスマス！ {a}ありがとう。お返しはキャンディーです。"}  # f文字列というPythonの機能を使っている
