@@ -53,7 +53,7 @@ def index():
                                 ctx.moveTo(250, 250);
                                 ctx.arc(250,250,100,i*Math.PI/5,(i+1)*Math.PI/5,false);
                                 ctx.closePath();
-                                ctx.fillStyle = `rgb(${Math.floor(i*255/10)}, 0, 0)`;
+                                ctx.fillStyle = `hsl(${Math.floor(i*360/10)}, 100%, 50%)`;
                                 ctx.fill();
                             }
                         }
