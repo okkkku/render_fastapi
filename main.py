@@ -48,13 +48,12 @@ def index():
                         var canvas = document.getElementById('html');
                         if (canvas.getContext){
                             var ctx = canvas.getContext('2d');
+                            for(int i = 0; i < 10; i++) {
                             ctx.beginPath();
-                            ctx.ellipse(300,150,100,50,0,0,Math.PI*2.0,true);
-                            ctx.stroke();
-                            ctx.beginPath();
-                            ctx.ellipse(300,150,50,50,0,0,Math.PI,false);
-                            ctx.fillStyle = "orange";
+                            ctx.ellipse(300,150,50,50,0,0,i*Math.PI/5,true);
+                            ctx.fillStyle = "rgb(${Math.floor(i*255/10)} 255 0)";
                             ctx.fill();
+                            }
                         }
                     }
                 </script>
