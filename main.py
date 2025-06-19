@@ -50,7 +50,7 @@ def index():
                             var ctx = canvas.getContext('2d');
                             for(let i = 0; i < 10; i++) {
                             ctx.beginPath();
-                            ctx.ellipse(300,150,50,50,0,0,i*Math.PI/5,true);
+                            ctx.ellipse(300,150,50,50,0,i*Math.PI/5,(i+1)*Math.PI/5,true);
                             ctx.fillStyle = `rgb(${Math.floor(i*255/10)} 255 0)`;
                             ctx.fill();
                             }
