@@ -53,7 +53,8 @@ def index():
                             ctx.stroke();
                             ctx.beginPath();
                             ctx.ellipse(300,150,50,50,0,0,Math.PI,false);
-                            ctx.fill(#0f0);
+                            ctx.fillStyle = "orange";
+                            ctx.fill();
                         }
                     }
                 </script>
