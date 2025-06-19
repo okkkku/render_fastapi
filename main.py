@@ -50,6 +50,8 @@ def index():
 
 @app.post("/gcd")
 async def give_gcd(a, b):
-    while b: # bが0(False)になると終了
+    a = (int)a
+    b = (int)b
+    while b:
         a, b = b, a % b
     return {"response": f"サーバです。メリークリスマス！ {a}ありがとう。お返しはキャンディーです。"}  # f文字列というPythonの機能を使っている
