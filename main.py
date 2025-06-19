@@ -50,4 +50,4 @@ def index():
 
 @app.post("/present")
 async def give_present(a, b):
-    return {"response":　a + b "}  # f文字列というPythonの機能を使っている
+    return {"response":　int(a) + int(b) "}  # f文字列というPythonの機能を使っている
